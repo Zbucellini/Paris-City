@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Aiglon</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hotel Aiglon</h1>
+  </header>
+
+  <nav>
+    <ul class="main-menu">
+      <li><a href="../index.html">Pagina Principală</a></li>
+      <li><a href="../obiective.html">Obiective Turistice</a></li>
+      <li><a href="../cazare.html" class="active">Cazare</a></li>
+      <li><a href="../evenimente.html">Evenimente</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section>
+    <h2>Despre Hotel Aiglon</h2>
+    <p>Situat în Arondismentul 14, aproape de Cartierul Latin și de numeroase atracții culturale, Hotel Aiglon oferă
+      camere spațioase, elegant decorate și bine echipate, multe dintre ele având o priveliște spectaculoasă
+      asupra orașului. Hotelul dispune de parcare privată, un beneficiu rar în Paris, și oferă oaspeților săi
+      acces gratuit la Wi-Fi și opțiuni de mic dejun. Atmosfera liniștită și accesibilitatea sa fac din Hotel
+      Aiglon o alegere excelentă pentru oaspeții care vor să exploreze sudul Parisului în confort și stil.</p>
+
+    <h3>Galerie Foto</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="../images/aiglon/1.jpg" alt="Hotel Aiglon" width="300" height="200">
+          <p>Hotel Aiglon 1</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/aiglon/2.jpg" alt="Hotel Aiglon" width="300" height="200">
+          <p>Hotel Aiglon 2</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/aiglon/3.jpg" alt="Hotel Aiglon" width="300" height="200">
+          <p>Hotel Aiglon 3</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/aiglon/4.jpg" alt="Hotel Aiglon" width="300" height="200">
+          <p>Hotel Aiglon 4</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/aiglon/5.jpg" alt="Hotel Aiglon" width="300" height="200">
+          <p>Hotel Aiglon 5</p>
+        </div>
+      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+  <section class="reservation-section">
+    <h2>Rezervă acum</h2>
+    <form class="reservation-form" id="reservationForm" method="post" novalidate>
+
+      <div class="form-group">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" placeholder="Numele și prenumele tău" required aria-required="true" />
+        <span id="numeError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="adresa@exemplu.com" required aria-required="true" />
+        <span id="emailError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required aria-required="true" />
+        <span id="telefonError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group date-group">
+        <div>
+          <label for="data-checkin">Data check-In:</label>
+          <input type="date" id="data-checkin" name="data_checkin" required aria-required="true" />
+          <span id="checkinError" class="error-message" aria-live="polite"></span>
+        </div>
+        <div>
+          <label for="data-checkout">Data check-out:</label>
+          <input type="date" id="data-checkout" name="data_checkout" required aria-required="true" />
+          <span id="checkoutError" class="error-message" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tip-camera">Tipul camerei:</label>
+        <select id="tip-camera" name="tip_camera" required aria-required="true">
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suită</option>
+          <option value="family">Familie</option>
+        </select>
+        <span id="cameraError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="numar-persoane">Număr persoane:</label>
+        <input type="number" id="numar-persoane" name="numar_persoane" min="1" max="10" placeholder="1–10" required
+          aria-required="true" />
+        <span id="persoaneError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="mesaj">Cereri speciale:</label>
+        <textarea id="mesaj" name="mesaj" rows="4" placeholder="Scrie aici orice cerințe suplimentare..."></textarea>
+        <span id="mesajError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <button type="submit">Trimite rezervarea</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 Andrei Zbuce. Toate drepturile rezervate.</p>
+  </footer>
+  <script src="../js/menu.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/cazare.js"></script>
+</body>
+
+</html>

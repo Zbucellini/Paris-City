@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Inn Express</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Holiday Inn Express Paris-Canal De La Villette</h1>
+  </header>
+
+  <nav>
+    <ul class="main-menu">
+      <li><a href="../index.html">Pagina Principală</a></li>
+      <li><a href="../obiective.html">Obiective Turistice</a></li>
+      <li><a href="../cazare.html" class="active">Cazare</a></li>
+      <li><a href="../evenimente.html">Evenimente</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section>
+    <h2>Despre Inn Express</h2>
+    <p>Aflat pe malurile Canalului de l'Ourcq, în nord-estul Parisului, acest hotel modern oferă o oază de liniște
+      într-o zonă cunoscută pentru frumusețea și atmosfera sa relaxată. Camerele sunt luminoase și moderne, iar
+      unele oferă priveliști superbe asupra canalului. Hotelul pune la dispoziția oaspeților un mic dejun tip
+      bufet, inclus în preț, și un spațiu de lucru bine echipat. Apropierea de parcurile din zonă și de
+      cinematografele și cafenelele de pe malul apei face din acest hotel o alegere perfectă pentru oaspeții care
+      caută un refugiu relaxant în Paris.</p>
+
+    <h3>Galerie Foto</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="../images/inn1.jpg" alt="Hotel Inn" width="300" height="200">
+          <p>Hotel Inn 1</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/inn2.jpg" alt="Hotel Inn" width="300" height="200">
+          <p>Hotel Inn 2</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/inn3.jpg" alt="Hotel Inn" width="300" height="200">
+          <p>Hotel Inn 3</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/inn4.jpg" alt="Hotel Inn" width="300" height="200">
+          <p>Hotel Inn 4</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/inn5.jpg" alt="Hotel Inn" width="300" height="200">
+          <p>Hotel Inn 5</p>
+        </div>
+      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+  <section class="reservation-section">
+    <h2>Rezervă acum</h2>
+    <form class="reservation-form" id="reservationForm" method="post" novalidate>
+
+      <div class="form-group">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" placeholder="Numele și prenumele tău" required aria-required="true" />
+        <span id="numeError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="adresa@exemplu.com" required aria-required="true" />
+        <span id="emailError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required aria-required="true" />
+        <span id="telefonError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group date-group">
+        <div>
+          <label for="data-checkin">Data check-In:</label>
+          <input type="date" id="data-checkin" name="data_checkin" required aria-required="true" />
+          <span id="checkinError" class="error-message" aria-live="polite"></span>
+        </div>
+        <div>
+          <label for="data-checkout">Data check-out:</label>
+          <input type="date" id="data-checkout" name="data_checkout" required aria-required="true" />
+          <span id="checkoutError" class="error-message" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tip-camera">Tipul camerei:</label>
+        <select id="tip-camera" name="tip_camera" required aria-required="true">
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suită</option>
+          <option value="family">Familie</option>
+        </select>
+        <span id="cameraError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="numar-persoane">Număr persoane:</label>
+        <input type="number" id="numar-persoane" name="numar_persoane" min="1" max="10" placeholder="1–10" required
+          aria-required="true" />
+        <span id="persoaneError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="mesaj">Cereri speciale:</label>
+        <textarea id="mesaj" name="mesaj" rows="4" placeholder="Scrie aici orice cerințe suplimentare..."></textarea>
+        <span id="mesajError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <button type="submit">Trimite rezervarea</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 Andrei Zbuce. Toate drepturile rezervate.</p>
+  </footer>
+  <script src="../js/menu.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/cazare.js"></script>
+</body>
+
+</html>

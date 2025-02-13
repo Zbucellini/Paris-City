@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel B&B</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>B&B HOTEL Paris Nord 18ème</h1>
+  </header>
+
+  <nav>
+    <ul class="main-menu">
+      <li><a href="../index.html">Pagina Principală</a></li>
+      <li><a href="../obiective.html">Obiective Turistice</a></li>
+      <li><a href="../cazare.html" class="active">Cazare</a></li>
+      <li><a href="../evenimente.html">Evenimente</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section>
+    <h2>B&B HOTEL Paris Nord 18ème</h2>
+    <p>Situat în partea de nord a Parisului, acest hotel oferă cazare accesibilă și comodă, la doar câteva minute de
+      mers pe jos de stația de metrou și tramvai, care asigură legături facile către centrul orașului și Stade de
+      France. Hotelul dispune de camere moderne și luminoase, cu Wi-Fi gratuit și facilități practice. În
+      proximitate se află și cartierul Montmartre, cunoscut pentru atracțiile sale artistice și istoria sa
+      culturală. B&B HOTEL Paris Nord 18ème este perfect pentru turiștii care vor să exploreze Parisul fără a
+      cheltui o avere.</p>
+
+    <h3>Galerie Foto</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="../images/b&b/1.jpg" alt="Hotel B&B" width="300" height="200">
+          <p>Hotel B&B 1</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/b&b/2.jpg" alt="Hotel B&B" width="300" height="200">
+          <p>Hotel B&B 2</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/b&b/3.jpg" alt="Hotel B&B" width="300" height="200">
+          <p>Hotel B&B 3</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/b&b/4.jpg" alt="Hotel B&B" width="300" height="200">
+          <p>Hotel B&B 4</p>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/b&b/5.jpg" alt="Hotel B&B" width="300" height="200">
+          <p>Hotel B&B 5</p>
+        </div>
+      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+  <section class="reservation-section">
+    <h2>Rezervă acum</h2>
+    <form class="reservation-form" id="reservationForm" method="post" novalidate>
+
+      <div class="form-group">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" placeholder="Numele și prenumele tău" required aria-required="true" />
+        <span id="numeError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="adresa@exemplu.com" required aria-required="true" />
+        <span id="emailError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required aria-required="true" />
+        <span id="telefonError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group date-group">
+        <div>
+          <label for="data-checkin">Data check-In:</label>
+          <input type="date" id="data-checkin" name="data_checkin" required aria-required="true" />
+          <span id="checkinError" class="error-message" aria-live="polite"></span>
+        </div>
+        <div>
+          <label for="data-checkout">Data check-out:</label>
+          <input type="date" id="data-checkout" name="data_checkout" required aria-required="true" />
+          <span id="checkoutError" class="error-message" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tip-camera">Tipul camerei:</label>
+        <select id="tip-camera" name="tip_camera" required aria-required="true">
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suită</option>
+          <option value="family">Familie</option>
+        </select>
+        <span id="cameraError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="numar-persoane">Număr persoane:</label>
+        <input type="number" id="numar-persoane" name="numar_persoane" min="1" max="10" placeholder="1–10" required
+          aria-required="true" />
+        <span id="persoaneError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="mesaj">Cereri speciale:</label>
+        <textarea id="mesaj" name="mesaj" rows="4" placeholder="Scrie aici orice cerințe suplimentare..."></textarea>
+        <span id="mesajError" class="error-message" aria-live="polite"></span>
+      </div>
+
+      <button type="submit">Trimite rezervarea</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 Andrei Zbuce. Toate drepturile rezervate.</p>
+  </footer>
+  <script src="../js/menu.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/cazare.js"></script>
+</body>
+
+</html>
