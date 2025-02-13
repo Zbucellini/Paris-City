@@ -29,7 +29,7 @@ The website features a strictly hierarchical three-level structure spread across
   - A booking form to collect all necessary reservation information
 
 ### Events Page
-- **Event Listings:** Provides information on events happening in Paris over the next week.
+- **Event Listings:** Provides information on events happening in Paris.
 
 ### Contact Page
 - **Contact Form:** Includes a validated form for users to submit questions or suggestions.
